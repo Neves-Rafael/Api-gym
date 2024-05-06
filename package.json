@@ -1,0 +1,27 @@
+{
+  "name": "api-solid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src --out-dir build",
+    "start": "node build/server.js",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "Rafael Neves (nevesrafael.dev@gmail.com)",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "20.12.10",
+    "tsup": "8.0.2",
+    "tsx": "4.9.3",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "16.4.5",
+    "eslint": "8.57.0",
+    "fastify": "4.26.2",
+    "zod": "3.23.6"
+  }
+}
