@@ -8,4 +8,4 @@ app
   })
   .then(() => {
     console.log(`HTTP Server Running in PORT ${env.PORT} 🔥🔥🔥`);
-  });
+  })
