@@ -7,9 +7,9 @@ import { UseAlreadyExistError } from "../erros/user-already-exist-error";
 describe("Register User Service", () => {
   test("user password hash exist in registration", async () => {
     const inMemoryUserRepository = new InMemoryUsersRepository();
-    const userRegisterService = new UserRegisterService(inMemoryUserRepository);
+    const sut = new UserRegisterService(inMemoryUserRepository);
 
-    const { user } = await userRegisterService.execute({
+    const { user } = await sut.execute({
       name: "John Doe",
       email: "johndoe@gmail.com",
       password: "123456",
@@ -25,18 +25,18 @@ describe("Register User Service", () => {
 
   test("create a user with a email already exist", async () => {
     const inMemoryUserRepository = new InMemoryUsersRepository();
-    const userRegisterService = new UserRegisterService(inMemoryUserRepository);
+    const sut = new UserRegisterService(inMemoryUserRepository);
 
     const email = "johndoe@gmail.com";
 
-    await userRegisterService.execute({
+    await sut.execute({
       name: "John Doe",
       email,
       password: "123456",
     });
 
-    expect(() =>
-      userRegisterService.execute({
+    await expect(() =>
+      sut.execute({
         name: "John Doe",
         email,
         password: "123456",
@@ -46,9 +46,9 @@ describe("Register User Service", () => {
 
   test("user can make a register", async () => {
     const inMemoryUserRepository = new InMemoryUsersRepository();
-    const userRegisterService = new UserRegisterService(inMemoryUserRepository);
+    const sut = new UserRegisterService(inMemoryUserRepository);
 
-    const { user } = await userRegisterService.execute({
+    const { user } = await sut.execute({
       name: "John Doe",
       email: "johndoe@gmail.com",
       password: "123456",

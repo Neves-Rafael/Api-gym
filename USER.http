@@ -1,0 +1,16 @@
+POST http://localhost:3333/users
+Content-Type:application/json
+
+{
+  "name": "rafinha",
+  "email": "rafinha90@gmail.com",
+  "password": "654a6s4a5s"
+}
+
+POST http://localhost:3333/sessions
+Content-Type:application/json
+
+{
+  "email": "rafinha90@gmail.com",
+  "password": "654a6s4a5s"
+}
