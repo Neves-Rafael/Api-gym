@@ -4,6 +4,8 @@ import { InvalidCredentialsError } from "./erros/invalid-credentials-error";
 import { CheckIn } from "@prisma/client";
 import { ResourceNotFoundError } from "./erros/resource-not-found";
 import { getDistanceBetweenCoordinates } from "../utils/get-distance-between-coordinades";
+import { MaxNumbersOfCheckInsError } from "./erros/max-numbers-of-check-ins-error";
+import { MaxDistanceError } from "./erros/max-distance-error";
 
 interface CheckInServiceRequest {
   userId: string;
@@ -48,7 +50,7 @@ export class CheckInService {
     const MAX_DISTANCE_IN_KILOMETERS = 0.1;
 
     if (distance > MAX_DISTANCE_IN_KILOMETERS) {
-      throw new Error();
+      throw new MaxDistanceError();
     }
 
     const checkInOnSameDay = await this.checkInsRepository.findByUserIdOnDate(
@@ -57,7 +59,7 @@ export class CheckInService {
     );
 
     if (checkInOnSameDay) {
-      throw new Error();
+      throw new MaxNumbersOfCheckInsError();
     }
 
     const checkIn = await this.checkInsRepository.create({
