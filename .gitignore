@@ -6,6 +6,7 @@ build
 
 # Environment
 .env
+.vscode
 
 # Test
 coverage
