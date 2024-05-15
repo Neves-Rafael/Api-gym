@@ -7,6 +7,8 @@ Content-Type:application/json
   "password": "654a6s4a5s"
 }
 
+###
+
 POST http://localhost:3333/sessions
 Content-Type:application/json
 
@@ -14,3 +16,8 @@ Content-Type:application/json
   "email": "rafinha90@gmail.com",
   "password": "654a6s4a5s"
 }
+
+###
+
+GET http://localhost:3333/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMmVlNjE5OC0xYjc2LTRhMzItYjI1OC0yMmY2YjgwNmQ1ODQiLCJpYXQiOjE3MTU4MTAyNjF9.gB2xkxStqCUjGs3jxf5rxHf-VITLOp2zR3hp97zH0D0
