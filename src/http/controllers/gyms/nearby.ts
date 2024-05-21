@@ -13,7 +13,7 @@ export async function nearby(request: FastifyRequest, reply: FastifyReply) {
     }),
   });
 
-  const { latitude, longitude } = nearbyGymsQUerySchema.parse(request.body);
+  const { latitude, longitude } = nearbyGymsQUerySchema.parse(request.query);
 
   const fetchNearbyGymsService = makeFetchNearbyGymsService();
 
