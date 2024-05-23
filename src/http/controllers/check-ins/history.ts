@@ -4,7 +4,6 @@ import { makeFetchUserCheckInsHistoryService } from "../../../services/factories
 
 export async function history(request: FastifyRequest, reply: FastifyReply) {
   const checkInHistoryQuerySchema = z.object({
-    query: z.string(),
     page: z.coerce.number().min(1).default(1),
   });
 
@@ -17,7 +16,7 @@ export async function history(request: FastifyRequest, reply: FastifyReply) {
     page,
   });
 
-  return reply.status(201).send({
+  return reply.status(200).send({
     checkIns,
   });
 }
