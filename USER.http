@@ -2,8 +2,8 @@ POST http://localhost:3333/users
 Content-Type:application/json
 
 {
-  "name": "rafinha",
-  "email": "rafinha900@gmail.com",
+  "name": "admin",
+  "email": "rafinha@admin.com",
   "password": "654a6s4a5s"
 }
 
@@ -13,7 +13,7 @@ POST http://localhost:3333/sessions
 Content-Type:application/json
 
 {
-  "email": "rafinha900@gmail.com",
+  "email": "rafinha@admin.com",
   "password": "654a6s4a5s"
 }
 
@@ -32,3 +32,8 @@ Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4NmU0ZTI3Ny
 
 GET http://localhost:3333/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMmVlNjE5OC0xYjc2LTRhMzItYjI1OC0yMmY2YjgwNmQ1ODQiLCJpYXQiOjE3MTU4MTAyNjF9.gB2xkxStqCUjGs3jxf5rxHf-VITLOp2zR3hp97zH0D0
+
+###
+
+POST http://localhost:3333/gyms
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjpudWxsLCJzdWIiOiJhODA1OWI5Yi1iYTM4LTQyNGEtYjI5MS0wZjEwZTE4NDgzYmUiLCJpYXQiOjE3MTY1OTM2NDksImV4cCI6MTcxNjU5NDI0OX0.mpaWfhXor2Kg0P61rG8mLDMzo0g4qnFkUttVEh9tHZs
