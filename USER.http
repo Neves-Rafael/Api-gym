@@ -3,7 +3,7 @@ Content-Type:application/json
 
 {
   "name": "rafinha",
-  "email": "rafinha90@gmail.com",
+  "email": "rafinha900@gmail.com",
   "password": "654a6s4a5s"
 }
 
@@ -11,6 +11,17 @@ Content-Type:application/json
 
 POST http://localhost:3333/sessions
 Content-Type:application/json
+
+{
+  "email": "rafinha900@gmail.com",
+  "password": "654a6s4a5s"
+}
+
+###
+
+PATCH http://localhost:3333/token/refresh
+Content-Type:application/json
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4NmU0ZTI3Ny0xNWJmLTQxODUtYjVhYi03MDQ4NmRiNGE4ZjMiLCJpYXQiOjE3MTY1NzU1MzEsImV4cCI6MTcxNzE4MDMzMX0.q-ut7D8qJTu9PTXqpvr17L9B3_sEsOyomkb3Has5TLs
 
 {
   "email": "rafinha90@gmail.com",

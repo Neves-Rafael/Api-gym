@@ -28,8 +28,6 @@ describe("Validate Check-in Service", () => {
       checkInId: createdCheckIn.id,
     });
 
-    console.log(checkIn);
-
     expect(checkIn.validated_at).toEqual(expect.any(Date));
     expect(checkInsRepository.items[0].validated_at).toEqual(expect.any(Date));
   });
