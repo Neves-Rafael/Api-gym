@@ -1,0 +1,7 @@
+PATCH http://localhost:3333/token/refresh
+Content-Type:application/json
+
+{
+  "email": "rafinha90@gmail.com",
+  "password": "654a6s4a5s"
+}
