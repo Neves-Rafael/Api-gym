@@ -12,7 +12,7 @@ describe("Search Gyms (e2e)", () => {
   });
 
   test("be able to search a gym", async () => {
-    const { token } = await createAndAuthenticateUser(app);
+    const { token } = await createAndAuthenticateUser(app, true);
 
     await request(app.server)
       .post("/gyms")
